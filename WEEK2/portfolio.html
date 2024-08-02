@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tushar Belwal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <p>My Portfolio</p>
+      <div>
+        <a href="HTML-2.html">Home</a>
+        <a href="#skillsSection">Skills</a>
+        <a href="#projectsSection">Projects</a>
+        <a href="#contactSection">Contact Me</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="homeSection" id="homeSection">
+      <center>
+        <font size="6">Hi, I am Tushar Belwal, I am a Web Developer</font>
+      </center>
+    </section>
+    <hr size="2px" color="white" />
+    <section class="skillsSection" id="skillsSection">
+      <h2>Skills</h2>
+      <p>
+        I have experience in the following programming languages and
+        technologies.
+      </p>
+      <ul>
+        <li>C</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>Machine Learning</li>
+        <li>NLP</li>
+        <li>SQL</li>
+      </ul>
+    </section>
+    <hr size="2px" color="white" />
+    <section class="projectsSection" id="projectsSection">
+      <h2>Projects</h2>
+      <div class="project-box">
+        <h3>Profane Text Speech Detection</h3>
+        <p>
+          Conducted sentiment analysis on Twitter data using Natural Language Processing (NLP) techniques in Python. Processed and classified tweets as positive,
+          negative, giving 99% accuracy.
+        </p>
+        <button onclick="openModal('project1')">More Details</button>
+        <a href="https://github.com/tusharbelwal7/Profane_Text_Speech_Detection" target="_blank">View Project</a>
+      </div>
+      <div class="project-box">
+        <h3>Air Pollution Prediction</h3>
+        <p>
+          Utilizing K-Nearest Neighbors (KNN) algorithm for air pollution prediction. Spearheaded the implementation of machine learning models to analyze extensive environmental datasets, enabling precise forecasting of pollutant levels. Orchestrated the integration of KNN for local pattern recognition, resulting in highly accurate predictions.
+        </p>
+        <button onclick="openModal('project2')">More Details</button>
+        <a href="https://github.com/tusharbelwal7/Air_pollution_prediction" target="_blank">View Project</a>
+      </div>
+      <div class="project-box">
+        <h3>Skin Cancer Prediction</h3>
+        <p>
+          Developed a Convolutional Neural Network (CNN) model to predict skin cancer, classifying images into benign and malignant categories. Achieved an accuracy of 90%, demonstrating strong model performance and reliability in identifying skin cancer types.
+        </p>
+        <button onclick="openModal('project3')">More Details</button>
+        <a href="https://github.com/tusharbelwal7/Skin_cancer_prediction_deeplearning" target="_blank">View Project</a>
+      </div>
+    </section>
+    <hr size="2px" color="white" />
+    <section class="contactSection" id="contactSection">
+      <center>
+        <h2>Connect with me</h2>
+        <a class="linkedin" href="https://www.linkedin.com/in/tushar-belwal/" target="_blank">LinkedIn</a>
+        <a class="github" href="https://github.com/tusharbelwal7" target="_blank">Github</a>
+        <form id="contactForm" onsubmit="return validateForm()">
+          <br>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name"><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br><br>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea><br><br>
+          <button type="submit">Submit</button>
+        </form>
+      </center>
+    </section>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>
